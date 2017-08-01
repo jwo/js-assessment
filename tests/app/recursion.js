@@ -35,16 +35,16 @@ describe('recursion', () => {
   it('you should be able to return a list of files from the data', () => {
     const result = recursionAnswers.listFiles(fileData);
     expect(result.length).to.eql(8);
-    expect(result.indexOf('index.html') > -1).to.be.ok();
-    expect(result.indexOf('main.js') > -1).to.be.ok();
-    expect(result.indexOf('underscore.js') > -1).to.be.ok();
+    expect(result.indexOf('index.html') > -1).to.be.ok;
+    expect(result.indexOf('main.js') > -1).to.be.ok;
+    expect(result.indexOf('underscore.js') > -1).to.be.ok;
   });
 
   it('you should be able to return a list of files in a subdir', () => {
     const result = recursionAnswers.listFiles(fileData, 'js');
     expect(result.length).to.eql(5);
-    expect(result.indexOf('main.js') > -1).to.be.ok();
-    expect(result.indexOf('underscore.js') > -1).to.be.ok();
+    expect(result.indexOf('main.js') > -1).to.be.ok;
+    expect(result.indexOf('underscore.js') > -1).to.be.ok;
   });
 
   it('you should be able to return the nth number in a fibonacci sequence', () => {
