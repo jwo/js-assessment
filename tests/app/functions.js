@@ -12,7 +12,7 @@ describe('functions', () => {
   it('you should be able to use an array as arguments when calling a function', () => {
     const result = functionsAnswers.argsAsArray(sayIt, ['Hello', 'Ellie', '!']);
     expect(result).to.eql('Hello, Ellie!');
-    expect(sayItCalled).to.be.ok();
+    expect(sayItCalled).to.be.eq(true)
   });
 
   it('you should be able to return a function from a function', () => {
