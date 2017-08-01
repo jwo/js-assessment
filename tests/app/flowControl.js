@@ -6,8 +6,8 @@ describe('flow control', () => {
       num = Math.floor(Math.random() * 10) + 1;
     }
 
-    expect(flowControlAnswers.fizzBuzz()).not.to.be.ok();
-    expect(flowControlAnswers.fizzBuzz('foo')).not.to.be.ok();
+    expect(flowControlAnswers.fizzBuzz()).to.eq(false)
+    expect(flowControlAnswers.fizzBuzz('foo')).to.eq(false)
     expect(flowControlAnswers.fizzBuzz(2)).to.eql(2);
     expect(flowControlAnswers.fizzBuzz(101)).to.eql(101);
 
