@@ -14,15 +14,15 @@ stringsAnswers = {
     for (var i = 0; i < str.length; i++) {
       // are the lastN items all === str?
       // [5,6,7,8].slice(-2) gives you the last two items
-      const lastNItems = acc.slice(amount * -1)
+      const lastNItems = acc.slice(amount * -1);
 
       // If there are fewer than $amount of items in acc, then we should push
       // _or_ if the last two items are _not_ the current letter, we can push that too
       if ((lastNItems.length < amount) || (!lastNItems.every( a => a === str[i]))){
-        acc.push(str[i])
+        acc.push(str[i]);
       }
     }
-    return acc.join("")
+    return acc.join("");
   },
 
   /**
@@ -34,10 +34,10 @@ stringsAnswers = {
    * @returns {String} The original string of text str reversed.
    */
   reverseString: function reverseString(str) {
-    let acc = []
-    for (var i = str.length -1 ; i >= 0; i--) {
-      acc.push(str[i])
+    let acc = [];
+    for (let i = str.length -1 ; i >= 0; i--) {
+      acc.push(str[i]);
     }
-    return acc.join('')
+    return acc.join('');
   },
 };

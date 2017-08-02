@@ -49,11 +49,11 @@ arraysAnswers = {
   removeWithoutCopy: function removeWithoutCopy(arr, item) {
 
     /// Start by filtering the array into another array
-    const filteredArray = arr.filter( (i) => i !== item);
+    const filteredArray = arr.filter( i => i !== item);
 
     /// Keep the `arr` array there, never assigning over it
-    // set the 1,3,4 to be the elements of the arr
-    // this leaves some original elements in the array that we want to cut off
+    /// set the 1,3,4 to be the elements of the arr
+    /// this leaves some original elements in the array that we want to cut off
     for (var i = 0; i < filteredArray.length; i++) {
       arr[i] = filteredArray[i];
     }
@@ -155,8 +155,6 @@ arraysAnswers = {
    * @returns {Number[]} An array of numbers that appear in arr more than once.
    */
   duplicates: function duplicates(arr) {
-
-
     const dupes = arr.reduce( (counts, i) => {
       counts[i] = (counts[i] || 0) + 1;
       return counts;
@@ -186,7 +184,7 @@ arraysAnswers = {
    */
   findAllOccurrences: function findAllOccurrences(arr, target) {
     const indices = [];
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] === target){
         indices.push(i);
       }

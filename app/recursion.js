@@ -21,7 +21,7 @@ recursionAnswers = {
     let files = data.files;
 
     if ((dirName) && (data.dirName !== dirName) ){
-      files = []
+      files = [];
     }
     if (data.subDirs){
       data.subDirs.forEach( subDirData => {
@@ -29,8 +29,8 @@ recursionAnswers = {
           // We asked for a dirName and this is not it
         } else {
           // Call without the dirName to enable us to get the /js/vendor
-          const newFilesFound = listFiles(subDirData)
-          files = files.concat( newFilesFound )
+          const newFilesFound = listFiles(subDirData);
+          files = files.concat( newFilesFound );
         }
 
       })
@@ -49,9 +49,9 @@ recursionAnswers = {
    */
   fibonacci: function fibonacci(n) {
     if ((n === 1) || (n ===2)) {
-      return 1
+      return 1;
     } else {
-      return this.fibonacci(n-1) + this.fibonacci(n-2)
+      return this.fibonacci(n-1) + this.fibonacci(n-2);
     }
   },
 };

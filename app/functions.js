@@ -27,6 +27,6 @@ functionsAnswers = {
    * that begins with str + ', ' + that 1 argument.
    */
   functionFunction: function functionFunction(greeting) {
-    return (words) => `${greeting}, ${words}`
+    return (words) => `${greeting}, ${words}`;
   },
 };
