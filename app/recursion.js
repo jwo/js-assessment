@@ -35,7 +35,6 @@ recursionAnswers = {
 
       })
     }
-    console.log("After subdirectory", files)
     return files;
   },
 
