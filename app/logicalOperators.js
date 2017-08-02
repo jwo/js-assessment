@@ -23,5 +23,5 @@ logicalOperatorsAnswers = {
    */
   and: function and(a, b) {
     return a && b;
-  }
+  },
 };

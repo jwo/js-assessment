@@ -28,5 +28,5 @@ functionsAnswers = {
    */
   functionFunction: function functionFunction(greeting) {
     return words => `${greeting}, ${words}`;
-  }
+  },
 };

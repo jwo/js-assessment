@@ -1,4 +1,4 @@
-asyncAnswers = {
+asyncAnswers = { // eslint-disable-line no-undef
   /**
    * Asynchronously returns a value via a promise. Example:
    * async('anyValue').then((result) => { return result === 'anyValue';});
@@ -8,9 +8,9 @@ asyncAnswers = {
    */
   async: function async(value) {
     return {
-      then: fn => {
+      then: (fn) => {
         fn(value);
-      }
+      },
     };
   },
 
@@ -26,13 +26,13 @@ asyncAnswers = {
    */
   manipulateRemoteData: function manipulateRemoteData(url) {
     return {
-      then: fn => {
+      then: (fn) => {
         fetch(url)
           .then(r => r.json())
           .then(json => json.people.map(p => p.name))
           .then(names => names.sort())
           .then(fn);
-      }
+      },
     };
-  }
+  },
 };

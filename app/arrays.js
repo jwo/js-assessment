@@ -8,7 +8,7 @@ arraysAnswers = {
    */
   indexOf: function indexOf(arr, item) {
     // Implement a function, that returns the 0 based index of an element in an array.
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i += 1) {
       if (arr[i] === item) {
         return i;
       }
@@ -24,7 +24,9 @@ arraysAnswers = {
    */
   sum: function sum(arr) {
     let total = 0;
-    arr.forEach(i => (total += i));
+    arr.forEach((i) => {
+      total += i;
+    });
     return total;
   },
 
@@ -47,17 +49,17 @@ arraysAnswers = {
    * @returns {Number[]} The same array instance, but filtered down
    */
   removeWithoutCopy: function removeWithoutCopy(arr, item) {
-    /// Start by filtering the array into another array
+    // Start by filtering the array into another array
     const filteredArray = arr.filter(i => i !== item);
 
-    /// Keep the `arr` array there, never assigning over it
-    /// set the 1,3,4 to be the elements of the arr
-    /// this leaves some original elements in the array that we want to cut off
-    for (var i = 0; i < filteredArray.length; i++) {
-      arr[i] = filteredArray[i];
+    // Keep the `arr` array there, never assigning over it
+    // set the 1,3,4 to be the elements of the arr
+    // this leaves some original elements in the array that we want to cut off
+    for (let i = 0; i < filteredArray.length; i += 1) {
+      arr[i] = filteredArray[i]; // eslint-disable-line no-param-reassign
     }
-    /// Cut off the arrays extra slots by pop
-    /// using pop helps keep the instance "alive" and the same as in the tests
+    // Cut off the arrays extra slots by pop
+    // using pop helps keep the instance "alive" and the same as in the tests
     while (arr.length > filteredArray.length) {
       arr.pop();
     }
@@ -154,7 +156,7 @@ arraysAnswers = {
    */
   duplicates: function duplicates(arr) {
     const dupes = arr.reduce((counts, i) => {
-      counts[i] = (counts[i] || 0) + 1;
+      counts[i] = (counts[i] || 0) + 1; // eslint-disable-line no-param-reassign
       return counts;
     }, {});
 
@@ -184,11 +186,11 @@ arraysAnswers = {
    */
   findAllOccurrences: function findAllOccurrences(arr, target) {
     const indices = [];
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i += 1) {
       if (arr[i] === target) {
         indices.push(i);
       }
     }
     return indices;
-  }
+  },
 };

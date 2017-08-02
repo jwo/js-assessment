@@ -23,7 +23,7 @@ recursionAnswers = {
       files = [];
     }
     if (data.subDirs) {
-      data.subDirs.forEach(subDirData => {
+      data.subDirs.forEach((subDirData) => {
         if (dirName && subDirData.dirName !== dirName) {
           // We asked for a dirName and this is not it
         } else {
@@ -48,8 +48,7 @@ recursionAnswers = {
   fibonacci: function fibonacci(n) {
     if (n === 1 || n === 2) {
       return 1;
-    } else {
-      return this.fibonacci(n - 1) + this.fibonacci(n - 2);
     }
-  }
+    return this.fibonacci(n - 1) + this.fibonacci(n - 2);
+  },
 };
