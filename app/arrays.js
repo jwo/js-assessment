@@ -9,7 +9,7 @@ arraysAnswers = {
   indexOf: function indexOf(arr, item) {
     // Implement a function, that returns the 0 based index of an element in an array.
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === item){
+      if (arr[i] === item) {
         return i;
       }
     }
@@ -24,7 +24,7 @@ arraysAnswers = {
    */
   sum: function sum(arr) {
     let total = 0;
-    arr.forEach( i => total += i );
+    arr.forEach(i => (total += i));
     return total;
   },
 
@@ -36,7 +36,7 @@ arraysAnswers = {
    * @returns {Number[]} A new array containing all numbers from arr except item.
    */
   remove: function remove(arr, item) {
-    return arr.filter( e => item !== e);
+    return arr.filter(e => item !== e);
   },
 
   /**
@@ -47,9 +47,8 @@ arraysAnswers = {
    * @returns {Number[]} The same array instance, but filtered down
    */
   removeWithoutCopy: function removeWithoutCopy(arr, item) {
-
     /// Start by filtering the array into another array
-    const filteredArray = arr.filter( i => i !== item);
+    const filteredArray = arr.filter(i => i !== item);
 
     /// Keep the `arr` array there, never assigning over it
     /// set the 1,3,4 to be the elements of the arr
@@ -100,7 +99,6 @@ arraysAnswers = {
     return arr;
   },
 
-
   /**
    * Removes the first element from an array
    *
@@ -132,7 +130,7 @@ arraysAnswers = {
    * @returns {Number[]} The array arr, with the number item inserted at position index.
    */
   insert: function insert(arr, item, index) {
-    const firstSection = arr.slice(0,index);
+    const firstSection = arr.slice(0, index);
     const lastSection = arr.slice(index);
     return firstSection.concat(item).concat(lastSection);
   },
@@ -145,7 +143,7 @@ arraysAnswers = {
    * @returns {Number} The count of the number of times the number item appeared in arr.
    */
   count: function count(arr, item) {
-    return arr.filter( i => item === i).length;
+    return arr.filter(i => item === i).length;
   },
 
   /**
@@ -155,14 +153,16 @@ arraysAnswers = {
    * @returns {Number[]} An array of numbers that appear in arr more than once.
    */
   duplicates: function duplicates(arr) {
-    const dupes = arr.reduce( (counts, i) => {
+    const dupes = arr.reduce((counts, i) => {
       counts[i] = (counts[i] || 0) + 1;
       return counts;
-    }, {})
+    }, {});
 
     // Using Object.keys since 98% usage http://kangax.github.io/compat-table/es5/#test-Object.keys
     // (and we're using let/const)
-    return Object.keys(dupes).filter( key => dupes[key] > 1).map( i => parseInt(i, 10));
+    return Object.keys(dupes)
+      .filter(key => dupes[key] > 1)
+      .map(i => parseInt(i, 10));
   },
 
   /**
@@ -172,7 +172,7 @@ arraysAnswers = {
    * @returns {Number[]} A new array of numbers that contains the elements of arr squared.
    */
   square: function square(arr) {
-    return arr.map( i => i * i);
+    return arr.map(i => i * i);
   },
 
   /**
@@ -185,10 +185,10 @@ arraysAnswers = {
   findAllOccurrences: function findAllOccurrences(arr, target) {
     const indices = [];
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === target){
+      if (arr[i] === target) {
         indices.push(i);
       }
     }
     return indices;
-  },
+  }
 };

@@ -22,6 +22,6 @@ logicalOperatorsAnswers = {
    * @returns {bool} True if either a and b are both true, false otherwise.
    */
   and: function and(a, b) {
-    return a && b
+    return a && b;
   }
 };

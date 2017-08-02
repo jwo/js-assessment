@@ -10,7 +10,7 @@ stringsAnswers = {
    * @returns {String} A string with no more than amount number of repeated letters.
    */
   reduceString: function reduceString(str, amount) {
-    let acc = []
+    let acc = [];
     for (var i = 0; i < str.length; i++) {
       // are the lastN items all === str?
       // [5,6,7,8].slice(-2) gives you the last two items
@@ -18,7 +18,7 @@ stringsAnswers = {
 
       // If there are fewer than $amount of items in acc, then we should push
       // _or_ if the last two items are _not_ the current letter, we can push that too
-      if ((lastNItems.length < amount) || (!lastNItems.every( a => a === str[i]))){
+      if (lastNItems.length < amount || !lastNItems.every(a => a === str[i])) {
         acc.push(str[i]);
       }
     }
@@ -35,9 +35,9 @@ stringsAnswers = {
    */
   reverseString: function reverseString(str) {
     let acc = [];
-    for (let i = str.length -1 ; i >= 0; i--) {
+    for (let i = str.length - 1; i >= 0; i--) {
       acc.push(str[i]);
     }
-    return acc.join('');
-  },
+    return acc.join("");
+  }
 };

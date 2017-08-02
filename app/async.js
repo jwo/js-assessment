@@ -8,8 +8,10 @@ asyncAnswers = {
    */
   async: function async(value) {
     return {
-      then: (fn) => {fn(value)}
-    }
+      then: fn => {
+        fn(value);
+      }
+    };
   },
 
   /**
@@ -24,13 +26,13 @@ asyncAnswers = {
    */
   manipulateRemoteData: function manipulateRemoteData(url) {
     return {
-      then: (fn) => {
+      then: fn => {
         fetch(url)
-        .then( r => r.json() )
-        .then( json => json.people.map( p => p.name))
-        .then( names => names.sort() )
-        .then( fn )
+          .then(r => r.json())
+          .then(json => json.people.map(p => p.name))
+          .then(names => names.sort())
+          .then(fn);
       }
-    }
-  },
+    };
+  }
 };
